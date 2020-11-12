@@ -1,3 +1,9 @@
+  a {
+   &:hover {
+    text-decoration: none;
+   }
+  }
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -24,7 +30,7 @@
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 360px;
   object-fit: cover;
 }
 
