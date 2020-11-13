@@ -16,13 +16,13 @@ class DosesController < ApplicationController
   end
 
   def create
-    @dose = Dose.new(dose_params)
     @cocktail = Cocktail.find(params[:cocktail_id])
+    @dose = Dose.new(dose_params)
     @dose.cocktail = @cocktail
     if @dose.save
       redirect_to cocktail_path(@cocktail) # vers la show du cocktail
     else
-      render :new
+      render "cocktails/show" #, cocktail: @cocktail, dose: @dose # vers la form partial
     end
   end
 

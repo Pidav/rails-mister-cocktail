@@ -28,8 +28,12 @@
         <% end %>
       </div>
     </div>
-    <div class="dose-form m-2 list-inline">
-      <%= render "dose_form", cocktail: @cocktail, dose: @dose %>
+    <div class="dose-form m-2">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.association :ingredient %>
+        <%= f.input :description %>
+        <%= f.submit "Add a dose of pleasure", class: "btn nav-link" %>
+      <% end %>
     </div>
   </div>
  <!--  <%= link_to "Back to the barman's list", cocktails_path, {class: "btn btn-primary my-2"} %> -->
