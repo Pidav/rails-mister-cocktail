@@ -4,12 +4,38 @@ body {
   background-size: cover;
 }
 
-
-.ingredients-list {
-  // background-color: white;
+.cocktail-infos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
+  background-image: asset-url('tableau_ardoise.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  margin:2rem;
 }
+
+.ingredients-container {
+  background-image: asset-url('BGC_inside.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 3rem;
+  height: 500px;
+  width: 430px;
+  z-index: 100;
+  text-align: center;
+}
+.ingredients-list {
+  z-index: 5;
+  height: 400px;
+}
+
+
 
 .dose-form {
   padding: 2rem;
+  background-color: $yellow;
 }
