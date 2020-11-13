@@ -5,17 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'open-uri'
 
-url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
-hash_drinks = JSON.parse(open(url).read)
-ingredients = hash_drinks["drinks"]
-# puts ingredients.sample["strIngredient1"]
-50.times do
-  Ingredient.create(
-    name: ingredients.sample["strIngredient1"]
-    )
+
+# create ingredients
+# require 'open-uri'
+
+# url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+# hash_drinks = JSON.parse(open(url).read)
+# ingredients = hash_drinks["drinks"]
+# # puts ingredients.sample["strIngredient1"]
+# 50.times do
+#   Ingredient.create(
+#     name: ingredients.sample["strIngredient1"]
+#     )
+# end
+
+list = [ "irish whiskey", "scotch whisky", "bourbon", "milk", "mint leafs", "ice", "peaches", "sugar", "ginger ale", "lemon juice", "Grand Marnier", "Vermouth rosso", "Angostura", "orange juice", "ginger beer", "peach Schnaps", "breakfast tea", "raspberry jam", "apple juice", "honey sirup", "Vermouth blanco"]
+list.each do |v|
+ Ingredient.create(name: v)
 end
+
 
 # Cocktail.create(name: "Cuba Libre")
 # Cocktail.create(name: "Moonlighty")
