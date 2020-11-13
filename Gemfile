@@ -31,6 +31,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 gem 'json'
+gem 'cloudinary', '~> 1.16.0', '< 1.16.1'
 
 
 group :development, :test do
