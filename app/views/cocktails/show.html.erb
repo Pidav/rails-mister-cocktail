@@ -10,7 +10,6 @@
         <% if (@cocktail.doses.length > 0) %>
           <% @cocktail.doses.each do |dose| %>
             <div class="card-product px-4">
-              <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> -->
               <p> <strong><%= dose.ingredient.name %></strong> - <%= dose.description %></p>
               <div class="card-product-infos">
                 <%= link_to dose_path(dose), method: :delete do %>
@@ -20,7 +19,11 @@
             </div>
           <% end %>
         <% else %>
-          <p>Composition encore secrète...</p>
+        <div class="card-product px-4">
+          <p> <strong>Composition encore secrète...</strong></p>
+          <div class="card-product-infos">
+          </div>
+        </div>
         <% end %>
       </div>
     </div>
