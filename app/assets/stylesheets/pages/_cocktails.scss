@@ -18,19 +18,31 @@ body {
 }
 
 .ingredients-container {
+  height: 500px;
+  width: 560px;
+  text-align: center;
+}
+
+.glass-img {
   background-image: asset-url('BGC_inside.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem 3rem;
+  z-index: 10;
+  position: absolute;
+  top: auto;
+  left: auto;
   height: 500px;
   width: 430px;
-  z-index: 100;
-  text-align: center;
 }
+
 .ingredients-list {
-  z-index: 5;
-  height: 400px;
+  height: 340px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+
+
 }
 
 
